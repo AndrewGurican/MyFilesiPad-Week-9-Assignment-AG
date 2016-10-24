@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mdI-xP-vs5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Load ExternalPDF View Controller-->
+        <scene sceneID="C9G-1e-rnb">
+            <objects>
+                <viewController id="mdI-xP-vs5" customClass="LoadExternalPDFViewController" customModule="MyFilesiPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BZ3-wc-CyK"/>
+                        <viewControllerLayoutGuide type="bottom" id="hxn-tg-GNy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MkA-W0-rfm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6y-7d-cUV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="MyFiles" id="gaM-Hl-mvR"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7F-07-NkI">
+                                <rect key="frame" x="259" y="118" width="82" height="30"/>
+                                <state key="normal" title="Local PDF 2"/>
+                                <connections>
+                                    <action selector="btnlocal2:" destination="mdI-xP-vs5" eventType="touchUpInside" id="Mby-9R-fUK"/>
+                                    <segue destination="YzX-fW-zaL" kind="presentation" id="e6Y-Ht-nZJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7J-ym-HaH">
+                                <rect key="frame" x="251" y="156" width="99" height="30"/>
+                                <state key="normal" title="External PDF 1"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="znG-k9-Q9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opS-UY-eze">
+                                <rect key="frame" x="260" y="80" width="80" height="30"/>
+                                <state key="normal" title="Local PDF 1"/>
+                                <connections>
+                                    <action selector="btnlocal1:" destination="mdI-xP-vs5" eventType="touchUpInside" id="hHb-d6-JG7"/>
+                                    <segue destination="YzX-fW-zaL" kind="presentation" id="i8T-dR-hI7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="opS-UY-eze" firstAttribute="top" secondItem="A6y-7d-cUV" secondAttribute="bottom" constant="16" id="1l3-Lj-t9J"/>
+                            <constraint firstItem="g7J-ym-HaH" firstAttribute="top" secondItem="X7F-07-NkI" secondAttribute="bottom" constant="8" symbolic="YES" id="8r8-yA-ue0"/>
+                            <constraint firstItem="X7F-07-NkI" firstAttribute="centerX" secondItem="g7J-ym-HaH" secondAttribute="centerX" id="G8i-QW-bp4"/>
+                            <constraint firstItem="opS-UY-eze" firstAttribute="centerX" secondItem="X7F-07-NkI" secondAttribute="centerX" id="Jzr-Y7-Z9j"/>
+                            <constraint firstItem="A6y-7d-cUV" firstAttribute="centerX" secondItem="opS-UY-eze" secondAttribute="centerX" id="TSJ-EP-24a"/>
+                            <constraint firstAttribute="trailing" secondItem="A6y-7d-cUV" secondAttribute="trailing" id="cH5-ir-sNa"/>
+                            <constraint firstItem="X7F-07-NkI" firstAttribute="top" secondItem="opS-UY-eze" secondAttribute="bottom" constant="8" symbolic="YES" id="hRM-K2-ImG"/>
+                            <constraint firstItem="A6y-7d-cUV" firstAttribute="top" secondItem="BZ3-wc-CyK" secondAttribute="bottom" id="voO-uc-MLT"/>
+                            <constraint firstItem="A6y-7d-cUV" firstAttribute="leading" secondItem="MkA-W0-rfm" secondAttribute="leading" id="wD3-Sg-ah9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PV-Kr-1YG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272" y="-273"/>
+        </scene>
+        <!--Load Local View Controller-->
+        <scene sceneID="SIk-Wl-rz0">
+            <objects>
+                <viewController title="Load Local View Controller" id="YzX-fW-zaL" customClass="LocalPDFViewController" customModule="MyFilesiPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mhe-Jn-Tlr"/>
+                        <viewControllerLayoutGuide type="bottom" id="OBT-oI-cdF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mWG-aV-caI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Iw-dj-Ahl">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="My Local PDF" id="b9A-Md-3je">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="OCS-VR-zII">
+                                            <connections>
+                                                <action selector="btnBack:" destination="YzX-fW-zaL" id="QTb-FT-e3l"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Stm-HE-iDi">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Iw-dj-Ahl" firstAttribute="leading" secondItem="mWG-aV-caI" secondAttribute="leading" id="09Q-wS-ymk"/>
+                            <constraint firstItem="Stm-HE-iDi" firstAttribute="top" secondItem="8Iw-dj-Ahl" secondAttribute="bottom" id="0hb-vq-rtv"/>
+                            <constraint firstItem="8Iw-dj-Ahl" firstAttribute="top" secondItem="mhe-Jn-Tlr" secondAttribute="bottom" id="OZw-gC-ib2"/>
+                            <constraint firstItem="Stm-HE-iDi" firstAttribute="bottom" secondItem="OBT-oI-cdF" secondAttribute="top" id="g4D-KL-R1y"/>
+                            <constraint firstItem="8Iw-dj-Ahl" firstAttribute="trailing" secondItem="Stm-HE-iDi" secondAttribute="trailing" id="iOT-xa-2gO"/>
+                            <constraint firstItem="8Iw-dj-Ahl" firstAttribute="leading" secondItem="Stm-HE-iDi" secondAttribute="leading" id="ur8-be-o8p"/>
+                            <constraint firstAttribute="trailing" secondItem="8Iw-dj-Ahl" secondAttribute="trailing" id="z2a-Ns-AeV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Stm-HE-iDi" id="1Px-lg-zHK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iue-2d-B6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="-273"/>
+        </scene>
+        <!--Load External View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Load External View Controller" id="BYZ-38-t0r" customClass="ExternalPDFViewController" customModule="MyFilesiPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dy-FC-GUn">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="My External PDF" id="bXd-1b-YG7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="qxl-en-RO7">
+                                            <connections>
+                                                <action selector="btnBack:" destination="BYZ-38-t0r" id="6ff-ME-eTA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljd-ET-eg7">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Dy-FC-GUn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="09Z-PH-0rY"/>
+                            <constraint firstItem="Ljd-ET-eg7" firstAttribute="top" secondItem="9Dy-FC-GUn" secondAttribute="bottom" id="9lW-of-Qul"/>
+                            <constraint firstItem="9Dy-FC-GUn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GTt-MZ-Q9m"/>
+                            <constraint firstAttribute="trailing" secondItem="9Dy-FC-GUn" secondAttribute="trailing" id="IHa-dE-cfA"/>
+                            <constraint firstItem="Ljd-ET-eg7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="XOI-3l-ayE"/>
+                            <constraint firstItem="9Dy-FC-GUn" firstAttribute="leading" secondItem="Ljd-ET-eg7" secondAttribute="leading" id="qsE-NO-klE"/>
+                            <constraint firstItem="9Dy-FC-GUn" firstAttribute="trailing" secondItem="Ljd-ET-eg7" secondAttribute="trailing" id="vXx-Si-hrm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="Ljd-ET-eg7" id="e7c-aH-24b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="467"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i8T-dR-hI7"/>
+    </inferredMetricsTieBreakers>
+</document>
